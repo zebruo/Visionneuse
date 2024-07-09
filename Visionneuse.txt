@@ -1,4 +1,5 @@
-Ce script PHP, accompagné de JavaScript et HTML, crée une application web permettant de visualiser des photos organisées par année et mois. Voici une explication détaillée :
+Ce script PHP, accompagné de JavaScript et HTML, crée une application web permettant de
+visualiser des photos organisées par année et mois. Voici une explication détaillée :
 
 ### PHP
 
@@ -37,4 +38,7 @@ Ce script PHP, accompagné de JavaScript et HTML, crée une application web perm
 
 ### Résumé
 
-Ce script permet de parcourir un répertoire de photos, d'extraire et d'organiser leurs métadonnées, puis de les afficher sur une page web avec des options de navigation conviviales. L'utilisateur peut filtrer les photos par année et mois, et afficher chaque photo en plein écran avec des informations détaillées sur la prise de vue.
+Ce script permet de parcourir un répertoire de photos, d'extraire et d'organiser leurs métadonnées, 
+puis de les afficher sur une page web avec des options de navigation conviviales. 
+L'utilisateur peut filtrer les photos par année et mois, 
+et afficher chaque photo en plein écran avec des informations détaillées sur la prise de vue.

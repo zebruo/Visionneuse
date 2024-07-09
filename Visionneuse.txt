@@ -1,0 +1,40 @@
+Ce script PHP, accompagné de JavaScript et HTML, crée une application web permettant de visualiser des photos organisées par année et mois. Voici une explication détaillée :
+
+### PHP
+
+1. **Fonction `buildPhotoStructure` :**
+   - Prend en entrée un répertoire (`$dir`) contenant les photos et une URL de base (`$baseURL`).
+   - Utilise `RecursiveIteratorIterator` et `RecursiveDirectoryIterator` pour parcourir tous les fichiers du répertoire.
+   - Ignore les répertoires et les fichiers non JPG.
+   - Pour chaque photo, récupère le chemin, extrait l'année et le mois, et lit les métadonnées EXIF.
+   - Les métadonnées incluent des informations comme le nom de fichier, la date, le modèle de l'appareil photo, etc.
+   - Organise les photos dans une structure associative par année et mois.
+
+2. **Génération de la structure des photos :**
+   - Le script appelle `buildPhotoStructure` pour créer la structure des photos à partir du répertoire spécifié.
+   - Les photos et leurs métadonnées sont converties en JSON et intégrées dans le JavaScript de la page.
+
+### HTML
+
+- **Structure de la page :**
+  - Contient des éléments de navigation, des sélecteurs pour choisir l'année et le mois, et une zone de galerie pour afficher les photos.
+  - Un modal pour afficher les photos en plein écran avec leurs métadonnées.
+
+### JavaScript
+
+1. **Initialisation et gestion des sélecteurs :**
+   - Charge les années et les mois disponibles à partir de la structure des photos.
+   - Met à jour les options des sélecteurs dynamiquement en fonction des choix de l'utilisateur.
+
+2. **Affichage des photos :**
+   - Met à jour la galerie de photos en fonction de l'année et du mois sélectionnés.
+   - Affiche les photos et ajoute des écouteurs d'événements pour ouvrir le modal lors du clic sur une photo.
+
+3. **Modal et navigation :**
+   - Le modal affiche la photo sélectionnée avec ses métadonnées détaillées.
+   - Permet la navigation entre les photos via des boutons et les touches du clavier.
+   - Inclut des fonctionnalités pour démarrer et arrêter un diaporama.
+
+### Résumé
+
+Ce script permet de parcourir un répertoire de photos, d'extraire et d'organiser leurs métadonnées, puis de les afficher sur une page web avec des options de navigation conviviales. L'utilisateur peut filtrer les photos par année et mois, et afficher chaque photo en plein écran avec des informations détaillées sur la prise de vue.
